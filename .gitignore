@@ -4,4 +4,5 @@ django-drf-ecomerce
 .env
 .coverage
 db.sqlite3
+schema.yml
 .vscode
