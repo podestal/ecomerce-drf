@@ -6,18 +6,20 @@ class CategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Category
-        fields = '__all__'
+        fields = ["name"]
 
 
 class BrandSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Brand
-        fields = '__all__'
+        fields = "__all__"
 
 
 class ProductSerializer(serializers.ModelSerializer):
+    brand = BrandSerializer()
+    category = CategorySerializer()
 
     class Meta:
         model = models.Product
-        fields = '__all__'
+        fields = "__all__"
