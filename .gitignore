@@ -1,8 +1,7 @@
-*.log
-*.pot
-*.pyc
-__pycache__/
-local_settings.py
-/static/
+.pytest_cache
+**__pycache__/
 django-drf-ecomerce
 .env
+.coverage
+db.sqlite3
+.vscode
