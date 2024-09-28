@@ -6,3 +6,4 @@ django-drf-ecomerce
 db.sqlite3
 schema.yml
 .vscode
+htmlcov
