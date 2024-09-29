@@ -8,4 +8,17 @@ class CategoryFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = models.Category
 
-    name = "test_category"
+
+class BrandFactory(factory.django.DjangoModelFactory):
+
+    class Meta:
+        model = models.Brand
+
+
+class ProductFactory(factory.django.DjangoModelFactory):
+
+    class Meta:
+        model = models.Product
+
+    category = factory.SubFactory(CategoryFactory)
+    brand = factory.SubFactory(BrandFactory)

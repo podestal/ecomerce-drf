@@ -13,8 +13,20 @@ class TestCategoryModel:
 
 
 class TestBrandModel:
-    pass
+    def test_str_method(self, brand_factory):
+        # Arrange
+        # Act
+        x = brand_factory(name="test_brand")
+        # Assert
+        assert x.__str__() == "test_brand"
 
 
 class TestProductModel:
-    pass
+    def test_str_method(self, product_factory):
+        # Arrange
+        # Act
+        x = product_factory(
+            name="test_prod", description="test_description", is_digital=True
+        )
+        # Assert
+        assert x.__str__() == "test_prod"
