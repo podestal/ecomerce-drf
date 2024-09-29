@@ -8,7 +8,7 @@ from drfecomerce.product import views
 router = DefaultRouter()
 
 router.register("category", views.CategoryViewSet)
-router.register("Brand", views.BrandViewSet)
+router.register("brand", views.BrandViewSet)
 router.register("product", views.ProductViewSet)
 
 urlpatterns = [
