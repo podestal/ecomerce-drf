@@ -8,6 +8,8 @@ class CategoryFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = models.Category
 
+    name = factory.sequence(lambda n: "Category_%d" % n)
+
 
 class BrandFactory(factory.django.DjangoModelFactory):
 
