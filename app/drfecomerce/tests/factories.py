@@ -26,3 +26,4 @@ class ProductFactory(factory.django.DjangoModelFactory):
 
     category = factory.SubFactory(CategoryFactory)
     brand = factory.SubFactory(BrandFactory)
+    is_active = True
