@@ -10,6 +10,9 @@
 - pytest --cov
 > Coverage report command line
 
+- pytest -s
+> Tests output with printed info
+
 ## Coverage
 
 - coverage run -m pytest 
