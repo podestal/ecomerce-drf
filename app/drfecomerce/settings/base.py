@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     # External Packages
     "rest_framework",
     "drf_spectacular",
+    "debug_toolbar",
     # Internal Apps
     "drfecomerce.product",
 ]
@@ -35,6 +36,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -112,3 +114,7 @@ REST_FRAMEWORK = {"DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema"}
 SPECTACULAR_SETTINGS = {
     "TITLE": "Django DRF Ecomerce",
 }
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]

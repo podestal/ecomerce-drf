@@ -1,8 +1,9 @@
 from django.contrib import admin
+from django.conf import settings
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
-
+import debug_toolbar
 from drfecomerce.product import views
 
 router = DefaultRouter()
@@ -16,4 +17,5 @@ urlpatterns = [
     path("api/", include(router.urls)),
     path("api/schema", SpectacularAPIView.as_view(), name="schema"),
     path("api/schema/docs", SpectacularSwaggerView.as_view(url_name="schema")),
+    path("__debug__/", include(debug_toolbar.urls)),
 ]
