@@ -22,7 +22,7 @@ class ProductLineSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Category
-        fields = ["id", "sku", "stock_qty", "is_active"]
+        fields = ["id", "sku", "stock_qty"]
 
 
 class ProductSerializer(serializers.ModelSerializer):

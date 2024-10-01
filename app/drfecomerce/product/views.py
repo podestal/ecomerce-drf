@@ -38,7 +38,7 @@ class ProductViewSet(viewsets.ViewSet):
     A simple viewset for viewing all the products
     """
 
-    queryset = models.Product.objects.all()
+    queryset = models.Product.objects.select_related("category", "brand")
     lookup_field = "slug"
 
     def retrieve(self, request, slug=None):
